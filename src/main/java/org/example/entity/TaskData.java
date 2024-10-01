@@ -1,6 +1,7 @@
 package org.example.entity;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class TaskData {
@@ -35,7 +36,7 @@ public class TaskData {
         }
     }
     public Set<Task> getUnion(Set<Task>...sets){
-        Set<Task> union = new HashSet<>();
+        Set<Task> union = new LinkedHashSet<>();
         for (Set<Task> set:sets){
             union.addAll(set);
         }
